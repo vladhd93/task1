@@ -15,7 +15,7 @@
   align-items: center;
   padding: 0 rem(50px);
   cursor: pointer;
-  transition: all 1.5s;
+  transition: all .3s;
 
   &:hover{
     background: rgba($dark,.74);
@@ -34,15 +34,14 @@
 .panel__title{
   margin-bottom: rem(25px);
   text-align: center;
-  
+
   &:before{
-    background: url('../img/sprite1.png') no-repeat 10px 10px;
+    background: url('../img/sprite1.png') no-repeat -64px -41px;
     content: '';
     display: inline-block;
     width: 45px;
     height: 35px;
-
-
+    margin-bottom: rem(25px);
   }
 
   a{
@@ -54,6 +53,7 @@
    display: block;
   }
 }
+
 
 .panel_description{
   font-family: 'Merriweather-LightItalic';
@@ -91,10 +91,11 @@
   width: 0;
   padding: 0;
   overflow: hidden;
-
+  transition: all 1s;
   &.open{
     flex: 1 0 $panel-w;
     transform: translate(0,0);
     padding: 0 rem(50px);
   }
 }
+
