@@ -1,5 +1,5 @@
 
-    'use strict';
+
 
     function SlidePanel(options) {
         this.panel = options.panel;
@@ -10,8 +10,11 @@
     SlidePanel.prototype = {
         attachEvents: function () {
             var _self = this;
-            this.triggerElement.addEventListener("click", function () {
+            this.triggerElement.addEventListener("click", function (event) {
+                var target = event.target;
+                target.classList.toggle('active');
                 _self.toggleMenu();
+
             });
         },
 
@@ -27,3 +30,6 @@
             }
         }
     };
+
+
+

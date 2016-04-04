@@ -1,3 +1,5 @@
+'use strict';
+
 //= components/toggleSlide.js
 
 var SlidePanel = new SlidePanel({

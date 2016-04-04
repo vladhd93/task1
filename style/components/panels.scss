@@ -92,6 +92,10 @@
   padding: 0;
   overflow: hidden;
   transition: all 1s;
+  position: relative;
+
+
+  
   &.open{
     flex: 1 0 $panel-w;
     transform: translate(0,0);
