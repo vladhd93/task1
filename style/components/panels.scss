@@ -76,6 +76,21 @@
 .buttons-wrapper{
   opacity: 0;
   height: 0;
-
   transform: translate(0,50%);
+}
+
+.toggle-panel{
+  transform: translate(100%,0);
+  position: absolute;
+  z-index: -1;
+  flex: 0 0 0;
+  opacity: 0;
+
+  &.open{
+    transform: translate(0,0);
+    position:static;
+    flex: 1 0 $panel-w;
+    width: 0;
+    opacity: 1;
+  }
 }
