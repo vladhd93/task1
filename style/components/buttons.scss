@@ -1,16 +1,16 @@
-.buttons-wrapper{
+.buttons-wrapper {
   display: flex;
   justify-content: center;
 }
 
-.read-btn{
+.read-btn {
   padding: 13px 20px;
   background: repeating-linear-gradient(
-                75deg,
-                  rgba(#30123b,.4),
-                  rgba(#30123b,.4) 5px,
-                  rgba(#36214e,.4) 5px,
-                  rgba(#36214e,.4) 10px
+                  75deg,
+                  rgba(#30123b, .4),
+                  rgba(#30123b, .4) 5px,
+                  rgba(#36214e, .4) 5px,
+                  rgba(#36214e, .4) 10px
   );
   color: $white;
   text-transform: uppercase;
@@ -18,52 +18,29 @@
 }
 
 .toggle-panel-btn {
-  display: block;
+  position: absolute;
+  cursor: pointer;
   width: 33px;
   height: 33px;
-  position: absolute;
-  top: 0;
-  right: -33px;
-  z-index: 2;
-  
-  span {
-    position: relative;
-    display: block;
-    width: 20px;
+  background: rgba($dark, .8);
+
+  &:before, &:after {
+    content: '';
+    width: 25px;
     height: 2px;
     background: $light-grey;
-    transition: all .2s ease-in-out;
-
-    &:before, &:after {
-      position: absolute;
-      background: $light-grey;
-      content: '';
-      width: 20px;
-      height: 2px;
-      transition: all .2s ease-in-out;
-    }
-
-    &:before {
-      top: -8px;
-    }
-
-    &:after {
-      top: 8px;
-    }
+    display: block;
+  }
+  &:before {
+    transform: rotate(152deg) translate(7px, -19px);
+  }
+  &:after {
+    transform: rotate(220deg) translate(-6px, -1px);
   }
 
-  &.active{
-    span {
-      background: transparent;
-
-      &:before {
-        transform: rotate(45deg) translate(5px, 6px);
-      }
-
-      &:after {
-        transform: rotate(-45deg) translate(5px, -6px);
-      }
-    }
+  @media all and (max-width: 1500px){
+    display: none;
   }
 }
+
 

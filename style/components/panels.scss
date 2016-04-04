@@ -1,15 +1,20 @@
-.panels-wrapper{
+.panels-wrapper {
   display: flex;
   flex: 0 1 calc(100% - $sidebar-w);
   width: calc(100% - $sidebar-w);
   min-height: 100%;
+  position: relative;
   overflow: hidden;
+
+  @media all and (max-width: 1500px){
+    flex-direction: column;
+  }
 }
 
-.panel{
+.panel {
   display: flex;
   flex: 1 0 $panel-w;
-  background: rgba($dark,.55);
+  background: rgba($dark, .55);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -17,25 +22,29 @@
   cursor: pointer;
   transition: all .3s;
 
-  &:hover{
-    background: rgba($dark,.74);
+  @media all and (max-width: 1500px){
+    padding: rem(50px);
+  }
+
+  &:hover {
+    background: rgba($dark, .74);
 
     .panel__title-heading,
     .buttons-wrapper,
-    .panel_description{
+    .panel_description {
       height: inherit;
       opacity: 1;
       transition: all .4s;
-      transform:translate(0,0);
+      transform: translate(0, 0);
     }
   }
 }
 
-.panel__title{
+.panel__title {
   margin-bottom: rem(25px);
   text-align: center;
 
-  &:before{
+  &:before {
     background: url('../img/sprite1.png') no-repeat -64px -41px;
     content: '';
     display: inline-block;
@@ -44,18 +53,21 @@
     margin-bottom: rem(25px);
   }
 
-  a{
+  a {
     text-transform: uppercase;
     color: $white;
     font-family: 'TrajanPro3-Regular';
     font-size: rem(38px);
     text-align: center;
-   display: block;
+    display: block;
+
+    @media all and (max-width: $lg) {
+      font-size: rem(26px);
+    }
   }
 }
 
-
-.panel_description{
+.panel_description {
   font-family: 'Merriweather-LightItalic';
   color: $light-grey;
   font-size: 16px;
@@ -65,10 +77,10 @@
   opacity: 0;
   height: 0;
 
-  transform: translate(0,50%);
+  transform: translate(0, 50%);
 }
 
-.panel__title-heading{
+.panel__title-heading {
   color: $white;
   font-family: 'Gotham-Light';
   font-size: 28px;
@@ -76,30 +88,30 @@
   opacity: 0;
   height: 0;
 
-  transform: translate(0,50%);
+  transform: translate(0, 50%);
 }
 
-.buttons-wrapper{
+.buttons-wrapper {
   opacity: 0;
   height: 0;
-  transform: translate(0,50%);
+  transform: translate(0, 50%);
 }
 
-.panel.toggle-panel{
-  flex: 0;
-  transform: translate(-100%,0);
-  width: 0;
-  padding: 0;
-  overflow: hidden;
-  transition: all 1s;
-  position: relative;
 
 
-  
-  &.open{
-    flex: 1 0 $panel-w;
-    transform: translate(0,0);
-    padding: 0 rem(50px);
+@media all and (min-width: 1500px){
+  .panel.toggle-panel {
+    flex: 0;
+    transform: translate(-100%, 0);
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 1s;
+
+    &.open {
+      flex: 1 0 $panel-w;
+      transform: translate(0, 0);
+      padding: 0 rem(50px);
+    }
   }
 }
-
