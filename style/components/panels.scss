@@ -14,7 +14,8 @@
   align-items: center;
   padding: 0 rem(50px);
   cursor: pointer;
-  transition: all .4s;
+  transition: all 1s;
+
   &:hover{
     background: rgba($dark,.74);
 
@@ -80,17 +81,21 @@
 }
 
 .toggle-panel{
-  transform: translate(100%,0);
-  position: absolute;
-  z-index: -1;
-  flex: 0 0 0;
+  transform: translate(-100%,0);
+  width: 0;
+  flex: 0;
   opacity: 0;
+  transition: all 1s;
+  padding: 0;
 
   &.open{
+    width: auto;
     transform: translate(0,0);
     position:static;
     flex: 1 0 $panel-w;
-    width: 0;
     opacity: 1;
+    z-index: 1;
+    transition: all 1s;
+    padding: 0 rem(50px);
   }
 }
