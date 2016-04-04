@@ -1,0 +1,18 @@
+.buttons-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.read-btn{
+  padding: 13px 20px;
+  background: repeating-linear-gradient(
+                75deg,
+                  rgba(#30123b,.4),
+                  rgba(#30123b,.4) 5px,
+                  rgba(#36214e,.4) 5px,
+                  rgba(#36214e,.4) 10px
+  );
+  color: $white;
+  text-transform: uppercase;
+  border: 1px solid $white;
+}

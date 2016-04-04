@@ -1,0 +1,26 @@
+.social-list{
+  border-top: 1px solid rgba(#ccc, .25);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 15px 0 15px;
+  margin-bottom: 20px;
+}
+
+.social-list_link{
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.social-list__linkedin{
+background: url('../img/sprite1.png') no-repeat -5px -2px;
+}
+
+.social-list__twitter{
+  background: url('../img/sprite1.png') no-repeat -51px -2px;
+}
+
+.social-list__facebook{
+  background: url('../img/sprite1.png') no-repeat -99px -2px;
+
+}

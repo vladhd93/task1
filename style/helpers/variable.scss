@@ -1,0 +1,28 @@
+//main colors
+
+$dark:#05030e;
+$light-grey:#f0e6e8;
+$white:#fff;
+$dark-blue:#111524;
+$yellow:#ffcb05;
+
+//main dimensions
+
+$sidebar-w:265px;
+$panels-wrapper-w:unquote("calc( 100% - #{$sidebar-w} )");
+$panel-w:25%;
+
+//breakpoints
+
+$lg:1680px;
+$md:1280px;
+$sm:992px;
+$xm:767px;
+$xs:481px;
+$mm:321px;
+
+//fonts
+
+$base-font:'Gotham-Light', sans-serif;
+
+
